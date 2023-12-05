@@ -1,0 +1,25 @@
+create database botwhats;
+use botwhats;
+create table Cadastro(
+    id_cadastro int primary key auto_increment,
+    numerocadastro varchar (250)
+);
+create table Sugestoes(
+id_sugestao int primary key auto_increment,
+numerowhats varchar(250),
+sugestao text,
+data date
+);
+
+CREATE TABLE Sessao(
+id_sessao INT AUTO_INCREMENT PRIMARY KEY,
+id_user int,
+token TEXT NOT NULL,
+generation_date DATETIME NOT NULL,
+expiration_date DATETIME NOT NULL,
+numerowhats_sessao varchar(250),
+revoked BOOLEAN DEFAULT FALSE,
+FOREIGN KEY(id_user) REFERENCES Cadastro(id_cadastro) ON DELETE CASCADE
+
+  
+);
