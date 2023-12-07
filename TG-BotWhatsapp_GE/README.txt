@@ -1,8 +1,9 @@
 Para executar tenha o Node.js, Mysql e um editor de código
 
 Execute no terminal
-npm install
 npm init -y
+npm install
+
 
 Após isso instale as seguintes bibliotecas:
 
